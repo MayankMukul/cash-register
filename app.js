@@ -8,9 +8,11 @@ var notes= [2000,500,200,100,50,20,10,5,1];
 var btnCheck = document.querySelector("#check-amount");
 var afterchechk = document.querySelector(".aftercheck");
 var notesnumber;
+var table = document.querySelector(".table")
 
 function countnotes(balance) {
     var rem = balance;
+   
     for(i in  notes){
         notesnumber = rem/notes[i];
         outputvalue[i].innerText = Math.trunc(notesnumber);
@@ -32,6 +34,7 @@ function checkAmount(){
 
 function check() {
     deletemsg2();
+    table.style.display="block";
     if (amount.value < 0){
         showmessage2("*Enter Valid Bill Amount");
         return ;
@@ -69,6 +72,6 @@ function beforecheck(){
 }
 
 beforecheck();
-
+table.style.display="none";
 btnCheck.addEventListener("click",checkAmount);
 btn.addEventListener("click",check);

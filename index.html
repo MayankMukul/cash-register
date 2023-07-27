@@ -8,21 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Cash Register Manager</h1>
+        <h1 class="title">Cash Register Manager</h1><hr>
         <p>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
-        <input id="bill-amount" type="number" placeholder="Enter the bill amount"><br>
+        <input id="bill-amount" type="number" placeholder="Enter the Bill Amount"><br>
         <label for="bill-amount">Bill Amount</label><br>
         <button id="check-amount">Next</button>
         <p class="error" id="error-message1"></p>
         <div class="aftercheck">
-            <input id="cash" type="number" placeholder="Enter the cash given"><br>
+            <input id="cash" type="number" placeholder="Enter the Cash Given"><br>
             <label for="cash-given">Cash Amount</label><br>
             <button id="btn-chk"> Check</button>
             <p class="error" id="error-message2"></p>
+
+        </div>  
+        <div class="table">
             <h2>Return Change</h2>
             <table>
                 <tr >
-                    <th>No of notes</th>
+                    <th>No of Notes</th>
                    <td class="notesnumber">0</td>
                    <td class="notesnumber">0</td>
                    <td class="notesnumber">0</td>
@@ -35,7 +38,7 @@
                     
                 </tr>
                 <tr>
-                    <th>note</th>
+                    <th>Note</th>
                     <td>2000</td>
                     <td>500</td>
                     <td>200</td>
@@ -44,7 +47,7 @@
                     <td>20</td>
                     <td>10</td>
                     <td>5</td>
-                    <td>1</td>
+                    <td><span>1</span></td>
                 </tr>
             </table>
         </div>
