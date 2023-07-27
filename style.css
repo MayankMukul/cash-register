@@ -2,6 +2,7 @@ body {
     padding:1rem;
     margin: 2rem;
     display: block;
+    background-color: whitesmoke;
 }
 
 h1,h2 {
@@ -20,4 +21,22 @@ button {
 table, th, td {
     border: 1px solid;
     padding: .6rem;
+}
+
+.container {
+    background-color: rgb(246, 232, 209);
+    border: solid 1px;
+    max-width:40%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-weight: bold;
 }
