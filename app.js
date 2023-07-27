@@ -20,9 +20,9 @@ function countnotes(balance) {
 
 function checkAmount(){
     if (amount.value < 0){
-        showmessage1("invalid amount");
+        showmessage1("*Enter Valid Amount");
     }else if (amount.value==0){
-        showmessage1("Bill amount zero nothing to cash");
+        showmessage1("*Bill Amount Zero Nothing To Cash");
     }else {
         deletemsg1();
         afterchechk.style.display="block";
@@ -33,16 +33,16 @@ function checkAmount(){
 function check() {
     deletemsg2();
     if (amount.value < 0){
-        showmessage2("Invalid Bill Amount");
+        showmessage2("*Enter Valid Bill Amount");
         return ;
     }else if (amount.value==0){
-        showmessage2("Bill amount zero")
+        showmessage2("*Bill Amount Zero")
     }
     if ((amount.value) <= (cash.value)){
         var balance = cash.value-amount.value;
         countnotes(balance);
     }else {
-        showmessage2("Invalid Amount!   Need more cash");
+        showmessage2("Invalid Amount!   Need More Cash");
     }
 }
 

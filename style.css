@@ -39,4 +39,11 @@ table, th, td {
 
 label {
     font-weight: bold;
+    padding: 1rem;
+}
+
+.error {
+    color:#ff5733 ;
+    font-size:1.5em;
+    text-align: center;
 }
