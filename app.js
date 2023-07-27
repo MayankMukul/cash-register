@@ -1,7 +1,7 @@
 var ammount = document.querySelector("#bill-amount");
 var cash = document.querySelector("#cash");
 var btn = document.querySelector("#btn-chk");
-var outputvalue = document.querySelector("#output"); 
+var outputvalue = document.querySelectorAll(".notesnumber") ; 
 var message = document.querySelector("#error-message");
 
 function countnotes(balance) {
@@ -10,36 +10,36 @@ function countnotes(balance) {
     var rem = balance;
     for(i in  notes){
         notesnumber = rem/notes[i];
+        outputvalue[i].innerText = Math.trunc(notesnumber);
         console.log(notes[i] +","+ Math.trunc(notesnumber));
         rem = rem%notes[i];
-        console.log(rem);
+        
     }
 }
 
 function check() {
-    console.log(ammount.value);
-    console.log(cash.value);
-    
-
-    if (ammount.value < 0){
-        console.log("invalid ammount");
-        showmessage("invalid ammount");
+    deletemsg();
+    if (ammount.value <= 0){
+        console.log("invalid amount");
+        showmessage("invalid amount");
+        return ;
     }
-
-    if ((ammount.value) < (cash.value)){
+    if ((ammount.value) <= (cash.value)){
         var balance = cash.value-ammount.value;
-        console.log("ammount to be returned "+ balance);
-        showmessage("amount to be returned"+balance);
+        
         countnotes(balance);
-    }else{
-        console.log("Invalid Transaction");
-        showmessage("Invalid aamount");
+    }else {
+        showmessage("Invalid amount need  more cash");
     }
 }
 
 function showmessage(msg){
     message.style.display ="block";
     message.innerText = msg;
+}
+
+function deletemsg(){
+    message.style.display="none";
 }
 
 btn.addEventListener("click",check);
