@@ -47,3 +47,11 @@ label {
     font-size:1.5em;
     text-align: center;
 }
+
+button {
+    cursor: pointer;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+}
