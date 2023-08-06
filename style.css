@@ -1,6 +1,6 @@
 body {
-    padding:1rem;
-    margin: 2rem;
+    padding:0rem;
+    margin: 0rem;
     display: block;
     background-color: whitesmoke;
 }
@@ -26,8 +26,9 @@ table, th, td {
 .container {
     background-color: rgb(246, 232, 209);
     border: solid 1px;
-    max-width:40%;
-    margin: auto;
+    width:40%;
+    min-width: 480px;
+    margin: 4rem auto ;
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -58,9 +59,9 @@ button {
 
 table {
     text-align: center;
-    margin: auto;
-    
+    margin: auto;   
 }
+
 hr{
     border: solid 1px;
 }
